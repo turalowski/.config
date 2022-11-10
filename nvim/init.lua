@@ -1,2 +1,5 @@
 require "turalowski.options"
-require "turalowski.keymaps"
+-- require "turalowski.keymaps"
+require "turalowski.plugins"
+require "turalowski.colorscheme"
+require "turalowski.cmp"
