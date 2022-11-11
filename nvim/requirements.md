@@ -1,0 +1,8 @@
+- [x] Options
+- [x] Keymaps
+- [x] Plugins
+- [x] Color schemes
+- [x] Fonts
+- [x] Code completion
+- [x] Code highlighting
+- [x] Status line 
