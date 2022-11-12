@@ -75,10 +75,6 @@ local on_attach = function(client, bufnr)
 	end, bufopts)
 end
 
-require("mason").setup()
-require("mason-lspconfig").setup({
-	ensure_installed = { "sumneko_lua", "rust_analyzer", "eslint", "cssls", "jsonls", "tsserver" },
-})
 
 local lsp_flags = {
 	-- This is the default in Nvim 0.7+
