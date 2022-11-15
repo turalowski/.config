@@ -55,7 +55,7 @@ return packer.startup(function(use)
 	use("christoomey/vim-tmux-navigator")
 	use("szw/vim-maximizer") -- maximizes and restores current window
 
-	-- Essential plugins
+	-- Essential plugin
 	use("tpope/vim-surround") -- best plugin to work with quotes
 	use("vim-scripts/ReplaceWithRegister") -- replace words with buffer
 	use("numToStr/Comment.nvim")
@@ -121,7 +121,15 @@ return packer.startup(function(use)
 	-- Git
 	use("tpope/vim-fugitive")
 	use("lewis6991/gitsigns.nvim")
+	use("airblade/vim-gitgutter")
 
+	-- TMUX
+	use({
+		"aserowy/tmux.nvim",
+		config = function()
+			require("tmux").setup()
+		end,
+	})
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

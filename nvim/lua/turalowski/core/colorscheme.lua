@@ -1,7 +1,7 @@
 -- Other themes: gruvbox, tokyonight, catppuccin, nightfly
-local colorscheme = "rose-pine"
+local colorscheme = "nightfly"
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
-  vim.notify("colorscheme " .. colorscheme .. " not found!")
-  return
+	vim.notify("colorscheme " .. colorscheme .. " not found!")
+	return
 end
