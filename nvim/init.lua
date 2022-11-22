@@ -16,7 +16,6 @@ require("turalowski.plugins.autopairs")
 require("turalowski.plugins.treesitter")
 require("turalowski.plugins.gitsigns")
 require("turalowski.plugins.colorizer")
-require("turalowski.plugins.gitgutter")
 -- LSP
 require("turalowski.plugins.lsp.mason")
 require("turalowski.plugins.lsp.lspsaga")

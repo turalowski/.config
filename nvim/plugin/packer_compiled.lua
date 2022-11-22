@@ -224,6 +224,11 @@ _G.packer_plugins = {
     path = "/Users/turalowski/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
+  ["telescope-file-browser.nvim"] = {
+    loaded = true,
+    path = "/Users/turalowski/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
+    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
+  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/Users/turalowski/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
@@ -255,11 +260,6 @@ _G.packer_plugins = {
     path = "/Users/turalowski/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
-  ["vim-gitgutter"] = {
-    loaded = true,
-    path = "/Users/turalowski/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
-    url = "https://github.com/airblade/vim-gitgutter"
-  },
   ["vim-maximizer"] = {
     loaded = true,
     path = "/Users/turalowski/.local/share/nvim/site/pack/packer/start/vim-maximizer",
@@ -279,6 +279,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/turalowski/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  ["vim-unimpaired"] = {
+    loaded = true,
+    path = "/Users/turalowski/.local/share/nvim/site/pack/packer/start/vim-unimpaired",
+    url = "https://github.com/tpope/vim-unimpaired"
   }
 }
 

@@ -77,7 +77,7 @@ return packer.startup(function(use)
 	-- Telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- Makes teelscope better
 	use("nvim-telescope/telescope.nvim")
-
+	use("nvim-telescope/telescope-file-browser.nvim")
 	-- Auto completion
 	use("hrsh7th/nvim-cmp") -- The completion plugin
 	use("hrsh7th/cmp-buffer") -- buffer completions
@@ -110,6 +110,8 @@ return packer.startup(function(use)
 			require("nvim-treesitter.install").update({ with_sync = true })
 		end,
 	})
+	-- Better navigation
+	use("tpope/vim-unimpaired")
 
 	-- Auto pairs & closing
 	use("windwp/nvim-autopairs")
@@ -121,7 +123,6 @@ return packer.startup(function(use)
 	-- Git
 	use("tpope/vim-fugitive")
 	use("lewis6991/gitsigns.nvim")
-	use("airblade/vim-gitgutter")
 
 	-- TMUX
 	use({
