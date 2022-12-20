@@ -40,23 +40,36 @@ end
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
+-- HTML
 lspconfig["html"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
+-- Pyright
+lspconfig["pyright"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+-- Typescript
 typescript.setup({
 	server = {
 		capabilities = capabilities,
 		on_attach = on_attach,
 	},
+	on_attach = function(client)
+		client.resolved_capabilities.document_formatting = false
+	end,
 })
 
+-- CSS
 lspconfig["cssls"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
 
+-- LUA
 lspconfig["sumneko_lua"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,

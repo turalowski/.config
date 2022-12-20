@@ -47,6 +47,7 @@ return packer.startup(function(use)
 	-- Color schemes
 	use("gruvbox-community/gruvbox")
 	use("folke/tokyonight.nvim")
+
 	use("bluz71/vim-nightfly-guicolors")
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use({ "rose-pine/neovim", as = "rose-pine" })
@@ -78,6 +79,8 @@ return packer.startup(function(use)
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- Makes teelscope better
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-file-browser.nvim")
+
+	use("theprimeagen/harpoon")
 	-- Auto completion
 	use("hrsh7th/nvim-cmp") -- The completion plugin
 	use("hrsh7th/cmp-buffer") -- buffer completions
@@ -131,8 +134,27 @@ return packer.startup(function(use)
 			require("tmux").setup()
 		end,
 	})
+
+	-- Lua
+	use({
+		"folke/todo-comments.nvim",
+		requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("todo-comments").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
+		end,
+	})
+	-- Better buffers
+	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
+	-- Markdown preview
+	use("ellisonleao/glow.nvim")
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
+	-- Undo tree
+	use("mbbill/undotree")
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end

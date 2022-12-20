@@ -27,8 +27,11 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
 
 keymap.set("n", "<leader>bn", ":bnext<CR>") -- next buffer
 keymap.set("n", "<leader>bp", ":bprev<CR>") -- previous buffer
+keymap.set("n", "<Tab>", ":bnext<CR>") -- next buffer
+keymap.set("n", "<S-Tab>", ":bprev<CR>") -- previous buffer
 keymap.set("n", "<leader>bl", ":buffers<CR>") -- list of buffers
 keymap.set("n", "<leader>bx", ":bdelete<CR>") -- delete buffer
+
 -- Plugin keymaps
 
 -- vim-maximizer
@@ -39,12 +42,16 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>")
-keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<CR>")
-keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>")
+keymap.set("n", "<leader>fs", "<cmd>Telescope grep_string<CR>")
+-- keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<CR>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>")
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>")
 
--- lsp key bindings
+-- telescope git
+keymap.set("n", "<leader>fgf", "<cmd>Telescope git_files<CR>")
+keymap.set("n", "<leader>fgb", "<cmd>Telescope git_branches<CR>")
+keymap.set("n", "<leader>fgs", "<cmd>Telescope git_stash<CR>")
+
 --   keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts)
 --   keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 --   keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)
